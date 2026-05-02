@@ -1,0 +1,71 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-obsidian: #030712;
+  --bg-navy: #0B1117;
+  --border-slate: #1F2937;
+  --cyan: #38BDF8;
+  --indigo: #818CF8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-obsidian);
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+}
+
+/* React Flow dark overrides */
+.react-flow__background { background: var(--bg-obsidian) !important; }
+.react-flow__edge-path { stroke: #38BDF8 !important; stroke-width: 2px; }
+.react-flow__edge-path.animated {
+  stroke-dasharray: 8;
+  animation: flow 1s linear infinite;
+}
+@keyframes flow {
+  from { stroke-dashoffset: 24; }
+  to   { stroke-dashoffset: 0; }
+}
+.react-flow__controls button {
+  background: #0B1117 !important;
+  border: 1px solid #1F2937 !important;
+  color: #38BDF8 !important;
+}
+.react-flow__minimap { background: #0B1117 !important; }
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(11, 17, 23, 0.85);
+  border: 1px solid #1F2937;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border-radius: 8px;
+}
+
+/* Cyan glow on active */
+.glow-cyan {
+  box-shadow: 0 0 0 0.5px #38BDF8, 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #030712; }
+::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #38BDF8; }
+
+/* Pulse animation for live indicator */
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.pulse-cyan { animation: pulse-cyan 2s ease-in-out infinite; }
+

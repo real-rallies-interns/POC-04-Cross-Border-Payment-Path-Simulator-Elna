@@ -1,11 +1,19 @@
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
+export interface FeeBreakdown {
+  correspondent_fee: number;
+  network_fee: number;
+  processing_fee: number;
+  total: number;
+}
+
 export interface Hop {
   hop_number: number;
   institution: string;
   role: string;
   country: string;
   fee_usd: number;
+  fee_breakdown: FeeBreakdown;
   delay_hours: number;
   swift_code: string;
   sanctions_flag: string;
@@ -22,6 +30,22 @@ export interface FXBreakdown {
   currency_pair: string;
 }
 
+export interface RailComparison {
+  rail: string;
+  avg_fee_pct: number;
+  avg_hours: number;
+  transparency: string;
+  settlement: string;
+}
+
+export interface ControlNode {
+  country: string;
+  bank: string;
+  dominance_score: number;
+  market_share_pct: number;
+  is_tier1: boolean;
+}
+
 export interface SimulationResult {
   from_country: string;
   to_country: string;
@@ -32,11 +56,15 @@ export interface SimulationResult {
   fx: FXBreakdown;
   total_fee_usd: number;
   total_fee_pct: number;
+  total_correspondent_fees: number;
+  total_network_fees: number;
+  total_fx_cost: number;
   estimated_arrival_hours: number;
   estimated_arrival_days: number;
   amount_received: number;
   sanctions_risk: string;
   corridor_note: string;
+  rail_comparisons: RailComparison[];
 }
 
 export interface Country {
@@ -50,13 +78,14 @@ export async function fetchCountries(): Promise<Country[]> {
   return res.json();
 }
 
-export async function fetchSimulation(
-  from: string,
-  to: string,
-  amount: number
-): Promise<SimulationResult> {
-  const url = `${BASE}/simulate?from_country=${from}&to_country=${to}&amount=${amount}`;
-  const res = await fetch(url);
+export async function fetchSimulation(from: string, to: string, amount: number): Promise<SimulationResult> {
+  const res = await fetch(`${BASE}/simulate?from_country=${from}&to_country=${to}&amount=${amount}`);
   if (!res.ok) throw new Error("Simulation failed");
+  return res.json();
+}
+
+export async function fetchControlMap(): Promise<ControlNode[]> {
+  const res = await fetch(`${BASE}/control-map`);
+  if (!res.ok) throw new Error("Failed to fetch control map");
   return res.json();
 }

@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\page.tsx -> @/components/PaymentFlowStage\":{\"id\":\"app\\\\page.tsx -> @/components/PaymentFlowStage\",\"files\":[\"static/css/_app-pages-browser_components_PaymentFlowStage_tsx.css\",\"static/chunks/_app-pages-browser_components_PaymentFlowStage_tsx.js\"]}}"
