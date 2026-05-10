@@ -1,0 +1,17 @@
+from_country,to_country,currency_pair,mid_rate,avg_fee_pct,avg_days,sanctions_risk,status,from_name,to_name,from_currency,to_currency,is_synthetic,data_source,corridor_id
+USA,IND,USD/INR,83.5,6.2,3.1,LOW,ACTIVE,United States,India,USD,INR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-001
+USA,MEX,USD/MXN,17.2,4.8,1.5,LOW,ACTIVE,United States,Mexico,USD,MXN,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-002
+USA,CHN,USD/CNY,7.25,5.5,2.8,MEDIUM,ACTIVE,United States,China,USD,CNY,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-003
+GBR,IND,GBP/INR,106.0,5.9,2.7,LOW,ACTIVE,United Kingdom,India,GBP,INR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-004
+GBR,NGA,GBP/NGN,1650.0,8.4,4.2,HIGH,ACTIVE,United Kingdom,Nigeria,GBP,NGN,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-005
+UAE,IND,AED/INR,22.7,3.8,1.2,LOW,ACTIVE,UAE,India,AED,INR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-006
+UAE,PAK,AED/PKR,76.0,4.1,1.5,MEDIUM,RESTRICTED,UAE,Pakistan,AED,PKR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-007
+SGP,IDN,SGD/IDR,11200.0,3.2,1.0,LOW,ACTIVE,Singapore,Indonesia,SGD,IDR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-008
+DEU,TUR,EUR/TRY,32.5,4.6,1.8,LOW,ACTIVE,Germany,Turkey,EUR,TRY,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-009
+USA,BRA,USD/BRL,5.05,6.8,3.5,LOW,ACTIVE,United States,Brazil,USD,BRL,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-010
+AUS,IND,AUD/INR,54.2,5.1,2.4,LOW,ACTIVE,Australia,India,AUD,INR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-011
+CAN,PHL,CAD/PHP,56.0,5.7,2.9,LOW,ACTIVE,Canada,Philippines,CAD,PHP,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-012
+JPN,VNM,JPY/VND,158.0,4.3,1.6,LOW,ACTIVE,Japan,Vietnam,JPY,VND,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-013
+USA,NGA,USD/NGN,1590.0,9.8,5.5,HIGH,RESTRICTED,United States,Nigeria,USD,NGN,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-014
+GBR,PAK,GBP/PKR,348.0,7.2,3.8,MEDIUM,RESTRICTED,United Kingdom,Pakistan,GBP,PKR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-015
+DEU,IND,EUR/INR,90.2,5.4,2.6,LOW,ACTIVE,Germany,India,EUR,INR,True,BIS CPMI Red Book + World Bank Remittance Matrix (Synthetic),COR-016
